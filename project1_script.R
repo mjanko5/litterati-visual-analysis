@@ -52,25 +52,23 @@ litmap
 ggplot(filtered, aes(x=factor(username)))  + geom_bar(stat="count", width=0.7, fill="steelblue")
 
 #goal:
+#NOTE: factor use:
+  # 1) ?
+  # 2) doesn't matter
+  # 3) no
+
 #over time: 
 ggplot(filtered, aes(x=factor(date))) + labs(title="Amount of Litter Picked Over Time", x="date", y = "amount per day") + geom_bar(stat="count", width=0.7, fill="steelblue")
 #weekday:
 ggplot(filtered, aes(x=factor(weekday))) + labs(title="Amount of Litter Picked by Day of The Week", x="day", y = "amount per day") + geom_bar(stat="count", width=0.7, fill="steelblue")
 #hour
-ggplot(filtered, aes(x=factor(hour))) + labs(title="Amount of Litter Picked by Hour of The Day", x="hour", y = "amount per hour") + geom_bar(stat="count", width=0.7, fill="steelblue")
+ggplot(filtered, aes(x=hour)) + labs(title="Amount of Litter Picked by Hour of The Day", x="hour", y = "amount per hour") + geom_bar(stat="count", width=0.7, fill="steelblue")
 
 
 
-
-
-
-
-
-
-
-
-
-
+# get top 10 pickers:
+occurences <-table(unlist(filtered$username))         #get frequency of each and convert df to table 
+top10pickers <- sort(occurences, decreasing=T)[1:10] #sort and get top 10
 
 
 
