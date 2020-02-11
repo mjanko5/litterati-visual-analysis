@@ -5,8 +5,8 @@ account: mjanko5
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 1783098
-bundleId: 2785708
+bundleId: 2790725
 url: https://mjanko5.shinyapps.io/Litterati_Forest_Park/
-when: 1581232061.71898
+when: 1581388599.33241
 asMultiple: FALSE
 asStatic: FALSE
